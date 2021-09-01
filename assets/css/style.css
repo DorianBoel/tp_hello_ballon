@@ -1,0 +1,280 @@
+/*ROOT*/
+:root {
+    --skyblue: #6DCED4;
+    --minuetblue: #6ED0D3;
+    --tealbayou : #539D9F;
+    --jasmineyllw : #EDD066;
+}
+
+/*CLASSES*/
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.dflex {
+    display: flex;
+}
+
+.dircolumn {
+    flex-direction: column;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+/*MEDIA*/
+@media (min-width: 744px) {
+    header nav.dircolumn, header nav div.dircolumn, footer nav.dircolumn {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    main section#accueil {
+        background-position: bottom;
+    }
+
+    main section#baskets {
+        height: 80vh;
+        background-size: 130%;
+        background-position: 32% 90%;
+        display: flex;
+    }
+
+    main section#baskets > div {
+        width: 56vw;
+        margin: 0 auto 0 13vw;
+        align-self: center;
+    }
+
+    main section#baskets > div h2 {
+        font-size: max(80px, 7vw);
+    }
+
+    main section#crayon.dircolumn, main section#cafe.dircolumn {
+        flex-direction: row;
+    }
+
+    main section#crayon article h2, main section#cafe article h2 {
+        font-size:  max(65px, 7vw);
+    }
+
+    main section#crayon img, main section#cafe img {
+        width: 106.5%;
+        height: auto;
+    }
+
+    main section#crayon article, main section#cafe article {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    main section#cafe img:first-child {
+        display: none;
+    }
+
+    main section#cafe img:last-child {
+        display: block;
+    }
+}
+
+/*HEADER*/
+header {
+    padding: 10px 0 30px;
+    box-shadow: 0px 3px 7px #00000029;
+}
+
+header nav {
+    align-items: center;
+    gap: 25px;
+}
+
+header nav div {
+    align-items: center;
+    gap: 5vw;
+}
+
+header nav div a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: var(--skyblue);
+}
+
+header nav a h1 img {
+    width: 50px;
+}
+
+/*FOOTER*/
+footer {
+    padding: 20px 0 30px;
+    box-shadow: 0px 3px 28px #00000029;
+} 
+
+footer > nav {
+    gap: 25px;
+}
+
+footer > nav > a {
+    align-self: center;
+}
+
+footer > nav > a img {
+    width: 150px;
+}
+
+footer > nav form {
+    align-self: center;
+}
+
+footer > nav form input[type="email"] {
+    width: max(150px, 15vw);
+    height: 27px;
+    border: 1.5px solid var(--tealbayou);
+    color: var(--tealbayou);
+    font-size: 15px;
+    padding: 3px 5px;
+}
+
+footer > nav form input[type="email"]:focus {
+    outline: none;
+}
+
+footer > nav form input[type="submit"] {
+    color: white;
+    border: 1.5px solid var(--tealbayou);
+    background-color: var(--minuetblue);
+    padding-top: 3px;
+    line-height: 30px;
+}
+
+footer > nav div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px 0;
+}
+
+footer > nav div h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: var(--minuetblue);
+    margin-bottom: 6px;
+}
+
+footer > nav div nav {
+    gap: 25px;
+    padding: 5px 0;
+}
+
+footer > nav div nav a i {
+    color: var(--tealbayou);
+    font-size: 20px;
+}
+
+/*INDEX SECTION ACCUEIL*/
+section#accueil {
+    background-image: url(../img/ballon.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 19% 0;
+}
+
+section#accueil > div:first-child {
+    color: white;
+    gap: 20px;
+    margin: 5vh auto;
+}
+
+section#accueil > div:first-child h2 {
+    font-size:  max(80px, 10vw);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+section#accueil > div:first-child p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 1px 1px 2px black;
+    line-height: 22px;
+}
+
+section#accueil > div:first-child a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FFFFFF61;
+    color: white;
+    height: 35px;
+    width: 165px;
+    text-align: center;
+    padding-top: 16.5px;
+}
+
+section#accueil > div:last-child {
+    background-color: var(--tealbayou);
+    padding: 20px 0;
+}
+
+section#accueil > div:last-child figure {
+    gap: 27px;
+    justify-content: space-around;
+}
+
+section#accueil > div:last-child figure div img {
+    width: 100%;
+}
+
+/*APROPOS SECTION BASKETS*/
+section#baskets {
+    background-image: url(../img/foot.jpg);
+    background-repeat: no-repeat;
+    background-size: 150%;
+    background-position: 32% 83%;
+    padding: 20px 0;
+}
+
+section#baskets > div {
+    color: white;
+    gap: 20px;
+}
+
+section#baskets > div h2 {
+    font-size:  max(80px, 10vw);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 2px 0 1px;
+}
+
+section#baskets > div p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 1px 1px 2px black;
+    line-height: 22px;
+}
+
+/*APROPOS SECTION CRAYON/CAFE*/
+section#crayon img, section#cafe img {
+    height: 40vh;
+    object-fit: cover;
+    object-position: 25% 0;
+}
+
+section#crayon article, section#cafe article {
+    gap: 20px
+}
+
+section#crayon article h2, section#cafe article h2 {
+    font-size:  max(65px, 10vw);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: var(--jasmineyllw);
+    margin-top: 15px;
+}
+
+section#crayon article p, section#cafe article p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--tealbayou);
+    line-height: 22px;
+}
+
+section#crayon article p:last-child, section#cafe article p:last-child {
+    padding-bottom: 25px;
+}
+
+section#cafe img:last-child {
+    display: none;
+}
